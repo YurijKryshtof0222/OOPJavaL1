@@ -1,12 +1,14 @@
 import java.util.Arrays;
 
-public class SecondProgramm {
+public class SecondProgram {
     public static void main(String[] args) {
-        int[][] matrix = {{9, 3, 7},
-                        {4, 8, 10},
-                        {7, 11, 6},
-                        {2, 5, 5}};
-        System.out.println(Arrays.deepToString(matrix));
+        int[][] matrix = new int[10][10];
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                matrix[i][j] = (int)(Math.random() * 30);
+            }
+        }
+        //System.out.println(Arrays.deepToString(matrix));
         int[] arr = maxElements(matrix);
         System.out.println(Arrays.toString(arr));
     }

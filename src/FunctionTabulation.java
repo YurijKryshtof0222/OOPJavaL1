@@ -1,29 +1,30 @@
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Main {
+import static java.lang.Math.*;
+
+public class FunctionTabulation {
     public static void main(String[] args) {
         List<Double> first = new LinkedList<>();
         List<Double> second = new LinkedList<>();
 
-        for (double x = -2; x <= 2; x += 0.1) {
-            double y = x*x * Math.sin(x);
+        for (double x = 0; x <= 10; x += 1) {
+            double y = sqrt(2*x*x + 5*x);
             first.add(y);
         }
-        for (double x = 6; x <= 8; x += 0.2) {
-            double y = x < 7 ? Math.sqrt(2.0/(x+1))
-                             : x * Math.cos(x);
+        for (double x = -2; x <= 4; x += 0.5) {
+            double y = x < 0 ? cos(sin(x + 2))
+                             : sin(pow(cos(x), 2));
             second.add(y);
         }
-        System.out.println(tabulationToString(first) + " - first tabulation");
-        System.out.println(tabulationToString(second) + "- second tabulation");
+        System.out.println("Tabulation of first function - " + tabulationToString(first));
+        System.out.println("Tabulation of second function - " + tabulationToString(second));
     }
 
     public static String tabulationToString(List<Double> list) {
         StringBuilder sb = new StringBuilder("[");
         for (Double d: list) {
-            sb.append(String.format("%.2f, ", d));
+            sb.append(String.format("%.2f; ", d));
         }
         return sb.replace(sb.length() - 2, sb.length() , "]").toString();
     }
