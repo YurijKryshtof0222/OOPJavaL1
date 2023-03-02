@@ -33,4 +33,4 @@
 <h2>Скріншоти демонстрації роботи програм</h2>
 
 ![image](https://user-images.githubusercontent.com/105464154/222351272-00967b78-65fd-401f-b986-3fa37a7ba2ad.png)
-![image](https://user-images.githubusercontent.com/105464154/222351552-b6fa51a1-285e-4d4b-8ca8-874af05a67b1.png)
+![image](https://user-images.githubusercontent.com/105464154/222353316-e9acfd21-bcbb-4e0d-8478-096df12e0fb7.png)
